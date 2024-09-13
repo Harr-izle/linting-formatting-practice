@@ -8,7 +8,10 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:linting-formatting-practice": "node dist/linting-formatting-practice/server/server.mjs",
-    "lint": "ng lint"
+    "lint": "eslint '**/*.{ts,html}' --fix",
+    "format": "prettier --write '**/*.{ts,js,html,css,json,md}'",
+    "lint:format": "npm run lint && npm run format",
+    "prepare": "husky && husky install"
   },
   "private": true,
   "dependencies": {
@@ -44,12 +47,15 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "git-format-staged": "^3.1.1",
+    "husky": "^8.0.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "typescript": "~5.4.2"
   }

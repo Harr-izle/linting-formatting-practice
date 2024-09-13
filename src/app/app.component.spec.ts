@@ -14,7 +14,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should have the \'linting-formatting-practice\' title', () => {
+  it("should have the 'linting-formatting-practice' title", () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('linting-formatting-practice');
@@ -24,6 +24,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, linting-formatting-practice');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Hello, linting-formatting-practice',
+    );
   });
 });
