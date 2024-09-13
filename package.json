@@ -13,6 +13,19 @@
     "lint:format": "npm run lint && npm run format",
     "prepare": "husky && husky install"
   },
+  "lint-staged": {
+    "*.ts": [
+      "npx eslint --fix",
+      "npx prettier --write"
+    ],
+    "*.html": [
+      "npx eslint --fix",
+      "npx prettier --write"
+    ],
+    "*.{css,js,json,md}": [
+      "npx prettier --write"
+    ]
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^17.3.0",
