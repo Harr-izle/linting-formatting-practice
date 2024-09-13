@@ -9,7 +9,7 @@ export class AppComponent implements OnInit {
   title = 'linting-formatting-practice';
 
   constructor() {
-    console.log("App component initialized");
+    console.log('App component initialized');
   }
 
   ngOnInit() {

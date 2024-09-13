@@ -30,6 +30,23 @@
             "prefix": "app",
             "style": "kebab-case"
           }
+        ],
+        // Custom rule 1: Require single quotes for strings
+        "@typescript-eslint/quotes": [
+          "error",
+          "single",
+          {
+            "avoidEscape": true
+          }
+        ],
+        // Custom rule 2: Disallow unused variables
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "after-used",
+            "ignoreRestSiblings": true
+          }
         ]
       }
     },
