@@ -1,0 +1,10 @@
+<h2>{{ title }}</h2>
+@for (forecast of forecasts; track forecast.date) {
+  <div class="forecast-item">
+    <span class="date">{{ forecast.date | date: 'shortDate' }}</span>
+    <span class="temperature">{{ forecast.temperature }}°C</span>
+    <span class="description">{{ forecast.description }}</span>
+  </div>
+} @empty {
+  <p>No forecast data available.</p>
+}
